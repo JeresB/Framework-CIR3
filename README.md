@@ -30,5 +30,9 @@ Cours - TP - astuce --> Cours de framework CIR3 ISEN
 * sudo apt-get install php-xdebug 
 * sudo apt-get install php-apcu 
 
+### Pour Symfony Demo
+
+* sudo apt-get install php-sqlite3
+
 
 by Jeres
