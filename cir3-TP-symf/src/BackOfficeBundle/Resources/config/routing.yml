@@ -1,0 +1,15 @@
+back_office_homepage:
+    path:     /
+    defaults: { _controller: BackOfficeBundle:Default:index }
+back_office_ip:
+    path:     /ip
+    defaults: { _controller: BackOfficeBundle:Default:showIp }
+back_office_test3:
+    path:     /test3
+    defaults: { _controller: BackOfficeBundle:Default:test3 }
+back_office_test4:
+    path:     /test4
+    defaults: { _controller: BackOfficeBundle:Default:test4 }
+back_office_exo3:
+    path:     /test5/libelle/{vallibel}/value/{valvalue}/nb/{valnb}
+    defaults: { _controller: BackOfficeBundle:Default:exo3 }

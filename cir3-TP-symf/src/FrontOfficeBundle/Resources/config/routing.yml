@@ -1,0 +1,15 @@
+front_office_homepage:
+    path:     /
+    defaults: { _controller: FrontOfficeBundle:Default:index }
+front_office_message1:
+    path:     /message/{message}
+    defaults: { _controller: FrontOfficeBundle:Default:message }
+
+front_office_test1:
+    path:     /test1/{numero}
+    defaults: { _controller: FrontOfficeBundle:Default:test1 }
+    requirements:
+        numero: '\d+'
+front_office_test2:
+    path:     /test2/{texte}
+    defaults: { _controller: FrontOfficeBundle:Default:test2, texte: texte }
