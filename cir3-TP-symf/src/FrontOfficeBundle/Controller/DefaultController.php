@@ -11,6 +11,15 @@ class DefaultController extends Controller
         return $this->render('FrontOfficeBundle:Default:index.html.twig');
     }
 
+    public function dstp13Action($mavariable)
+    {
+        $mavariable = strtoupper($mavariable);
+        
+        return $this->render('FrontOfficeBundle:Default:dstp13.html.twig', array(
+            'mavariable' => $mavariable,
+        ));
+    }
+
     public function messageAction($message)
     {
         return $this->render('FrontOfficeBundle:Default:message.html.twig', array(

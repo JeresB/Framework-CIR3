@@ -1,6 +1,12 @@
 front_office_homepage:
     path:     /
     defaults: { _controller: FrontOfficeBundle:Default:index }
+front_office_dstp12:
+    path:     /dstp12
+    defaults: { _controller: FrontOfficeBundle:Default:index }
+front_office_dstp13:
+    path:     /dstp13/{mavariable}
+    defaults: { _controller: FrontOfficeBundle:Default:dstp13 }
 front_office_message1:
     path:     /message/{message}
     defaults: { _controller: FrontOfficeBundle:Default:message }

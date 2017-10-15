@@ -1,0 +1,62 @@
+{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
+{% block content %}
+    <h2 style="text-align: center;">Détails</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Mail</th>
+            <th>Tel</th>
+            <th>Actif</th>
+            </tr>
+        </thead>
+        </tbody>
+            <tr><td>{{ internaute.id }}</td><td>{{ internaute.nom }}</td><td>{{ internaute.prenom }}</td><td>{{ internaute.mail }}</td><td>{{ internaute.tel }}</td><td>{{ internaute.actif }}</td></tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2 style="text-align: center;">Annonces</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Libelle</th>
+            <th>Date</th>
+            <th>Actif</th>
+            <th>Prix</th>
+            </tr>
+        </thead>
+        </tbody>
+            {% for annonce in annonces %}
+                <tr><td>{{ annonce.id }}</td><td>{{ annonce.titre }}</td><td>{{ annonce.libelle }}</td><td>{{ annonce.datedepot|date('d/m/Y à H:i:s') }}</td><td>{{ annonce.actif }}</td><td>{{ annonce.prix }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h2 style="text-align: center;">Avis</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Avis</th>
+            <th>Note</th>
+            <th>Date</th>
+            </tr>
+        </thead>
+        </tbody>
+            {% for unavis in avis %}
+                <tr><td>{{ unavis.id }}</td><td>{{ unavis.avis }}</td><td>{{ unavis.note }}</td><td>{{ unavis.dateCreation|date('d/m/Y à H:i:s') }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr />
+    <h3 style="text-align: center;"><a href="/admin/internautes">Internautes</a></h3>
+{% endblock %}

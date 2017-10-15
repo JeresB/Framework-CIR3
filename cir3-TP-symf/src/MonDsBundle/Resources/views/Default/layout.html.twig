@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+{% include('MonDsBundle:Default:header.html.twig') %}
+    <body>
+
+        <div class="container">
+            <div class="row">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        {% include('MonDsBundle:Default:footer.html.twig') %}
+    </body>
+</html>

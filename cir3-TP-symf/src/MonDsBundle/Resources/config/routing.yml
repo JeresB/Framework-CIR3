@@ -1,0 +1,20 @@
+mon_ds_homepage:
+    path:     /
+    defaults: { _controller: MonDsBundle:Default:index }
+
+mon_ds_dstp21:
+    path:     /dstp21
+    defaults: { _controller: MonDsBundle:Default:dstp21 }
+
+mon_ds_dstp22:
+    path:     /dstp22
+    defaults: { _controller: MonDsBundle:RouteElaboree:dstp22 }
+
+mon_ds_dstp22_message:
+    path:     /dstp22/{message}
+    defaults: { _controller: MonDsBundle:RouteElaboree:dstp22Message }
+
+mon_ds_dstp23:
+    path:     /dstp23
+    defaults: { _controller: MonDsBundle:dstp23:dstp23 }
+

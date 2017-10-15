@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Interface Amin</title>
+    </head>
+    <body>
+        <div id="header">
+        {% include('BackOfficeBundle:Default:header.html.twig') %}
+        </div>
+
+        <div id="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="card">
+                            <div class="card-block">
+                                {% block content %}{% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+        {% include('BackOfficeBundle:Default:footer.html.twig') %}
+        </div>
+    </body>
+</html>

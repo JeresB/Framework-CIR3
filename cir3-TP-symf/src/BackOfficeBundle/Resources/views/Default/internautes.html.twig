@@ -1,0 +1,18 @@
+{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Détails</th>
+            </tr>
+        </thead>
+        </tbody>
+            {% for internaute in internautes %}
+                <tr><td>{{ internaute.id }}</td><td>{{ internaute.nom }}</td><td>{{ internaute.prenom }}</td><td><a href="internaute/{{ internaute.id }}">Détails</a></td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

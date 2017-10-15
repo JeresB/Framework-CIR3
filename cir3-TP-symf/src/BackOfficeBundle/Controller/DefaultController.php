@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use BackOfficeBundle\lib\Test;
+use Doctrine\ORM\Mapping as ORM;
 
 class DefaultController extends Controller
 {
@@ -64,6 +65,35 @@ class DefaultController extends Controller
             'libelle' => $libelle,
             'value' => $value,
             'nb' => $nb,
+        ));
+    }
+
+    public function exo4Action($vallibel, $valvalue, $valnb)
+    {
+        $test = new Test();
+
+        $test->setLibelle($vallibel);
+        $test->setValue($valvalue);
+        $test->setNb($valnb);
+
+        $libelle = $test->getLibelle();
+        $value = $test->getValue();
+        $nb = $test->getNb();
+
+        return $this->render('BackOfficeBundle:Default:exo4.html.twig', array(
+            'libelle' => $libelle,
+            'value' => $value,
+            'nb' => $nb,
+        ));
+    }
+
+    public function getDBAction() {
+        $em = $this->get('doctrine')->getManager();
+        $annonce = $em->getRepository('BackOfficeBundle:Annonce');
+        $annonces = $annonce->findAll();
+
+        return $this->render('BackOfficeBundle:Default:db.html.twig', array(
+            'test' => $annonces,
         ));
     }
 }

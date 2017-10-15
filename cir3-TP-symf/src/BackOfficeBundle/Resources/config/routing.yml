@@ -13,3 +13,18 @@ back_office_test4:
 back_office_exo3:
     path:     /test5/libelle/{vallibel}/value/{valvalue}/nb/{valnb}
     defaults: { _controller: BackOfficeBundle:Default:exo3 }
+back_office_exo4:
+    path:     /test6/libelle/{vallibel}/value/{valvalue}/nb/{valnb}
+    defaults: { _controller: BackOfficeBundle:Default:exo4 }
+back_office_listInternaute:
+    path:     /internautes
+    defaults: { _controller: BackOfficeBundle:Internaute:list }
+back_office_internaute:
+    path:     /internaute/{id}
+    defaults: { _controller: BackOfficeBundle:Internaute:details }
+back_office_listAnnonce:
+    path:     /annonces
+    defaults: { _controller: BackOfficeBundle:Annonce:list }
+back_office_listAvis:
+    path:     /avis
+    defaults: { _controller: BackOfficeBundle:Avis:list }

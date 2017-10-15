@@ -1,0 +1,20 @@
+{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Titre</th>
+            <th>Libelle</th>
+            <th>Date</th>
+            <th>Actif</th>
+            <th>Prix</th>
+            </tr>
+        </thead>
+        </tbody>
+            {% for annonce in annonces %}
+                <tr><td>{{ annonce.id }}</td><td>{{ annonce.titre }}</td><td>{{ annonce.libelle }}</td><td>{{ annonce.datedepot|date('d/m/Y à H:i:s') }}</td><td>{{ annonce.actif }}</td><td>{{ annonce.prix }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
