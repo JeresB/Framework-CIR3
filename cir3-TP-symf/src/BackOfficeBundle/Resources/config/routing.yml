@@ -22,6 +22,9 @@ back_office_listInternaute:
 back_office_internaute:
     path:     /internaute/{id}
     defaults: { _controller: BackOfficeBundle:Internaute:details }
+back_office_add_internaute:
+    path:     /add_internaute
+    defaults: { _controller: BackOfficeBundle:Internaute:add }
 back_office_listAnnonce:
     path:     /annonces
     defaults: { _controller: BackOfficeBundle:Annonce:list }
